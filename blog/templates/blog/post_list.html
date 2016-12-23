@@ -7,16 +7,13 @@
       <h1><a href="">Life in Norway</a></h1>
     </div>
 
-    <div>
-      <h2>First months in Norway</h2>
-      <p>published: 2016-12-23</p>
-      <p>It has been a bit more than two months since I started working in Norway. So far, it has been a smooth transition, save of course the mandatory administrative pains that usually happen when migrating to another country.</p>
-    </div>
+    {% for post in posts %}
+        <div>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>published: {{ post.published_date }}</p>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
-    <div>
-      <h2>Scandinavian furniture</h2>
-      <p>published: 2016-12-23</p>
-      <p>The first months have been mainly about purchasing Scandinavian furniture. Although one would expect this to be IKEA, we actually went to some other stores too. But yeah, we bought most of our stuff from IKEA. We got a huge bed! I'm happy.</p>
-    </div>
   </body>
 </html>
